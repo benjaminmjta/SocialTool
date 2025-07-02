@@ -8,14 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="200" />
             <ColumnDefinition Width="4*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
 
-        <ContentControl Content="{Binding ControlViewModel}" Grid.Row="2"></ContentControl>
+        <ContentControl Content="{Binding ControlViewModel}" Grid.RowSpan="2" />
     </Grid>
 </Window>

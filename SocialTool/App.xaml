@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:SocialTool"
              xmlns:views="clr-namespace:SocialTool.Views"
              xmlns:viewmodels="clr-namespace:SocialTool.ViewModels"
+             xmlns:controlviews="clr-namespace:SocialTool.Views.Control"
+             xmlns:controlviewmodels="clr-namespace:SocialTool.ViewModels.Control"
              StartupUri="Views/MainWindow.xaml"
              ThemeMode="System">
     <Application.Resources>
@@ -14,6 +16,10 @@
             
             <DataTemplate DataType="{x:Type viewmodels:ControlViewModel}">
                 <views:ControlView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type controlviewmodels:BaseTaxViewModel}">
+                <controlviews:BaseTaxView />
             </DataTemplate>
             
         </ResourceDictionary>

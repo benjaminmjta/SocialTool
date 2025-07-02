@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace SocialTool.Views
+namespace SocialTool.Views.Control
 {
-    public partial class ControlView : UserControl
+    public partial class BaseTaxView : UserControl
     {
-        public ControlView()
+        public BaseTaxView() 
         {
             InitializeComponent();
         }

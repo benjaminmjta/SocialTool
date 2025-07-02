@@ -4,14 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SocialTool.Views"
-             mc:Ignorable="d" 
-             >
-    <Grid>
+             xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:components="clr-namespace:SocialTool.Components"
+             mc:Ignorable="d">
+    <Grid Width="200">
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <ContentControl Grid.Row="0" Content="{Binding BaseTaxViewModel}" />
+        <TextBlock Grid.Row="1" Text="{Binding BaseTaxViewModel.Limit}"/>
     </Grid>
 </UserControl>

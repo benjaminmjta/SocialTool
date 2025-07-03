@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SocialTool.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ namespace SocialTool.ViewModels.Control
     {
         public BaseTaxViewModel() 
         {
-            _isActive = true;
-            _limit = "1500";
-            _total = "15";
+            IsActive = true;
+            Limit = "1500";
+            Total = "15";
         }
 
         private bool _isActive;
@@ -26,6 +27,7 @@ namespace SocialTool.ViewModels.Control
             get { return _isActive; }
             set {
                 _isActive = value;
+                Calculations.BaseTaxActive = value;
                 OnPropertyChanged();
             }
         }
@@ -43,7 +45,8 @@ namespace SocialTool.ViewModels.Control
         {
             get { return _total; }
             set {
-                _total = value;
+                _total = (int.TryParse(value, out int result) ? result : 0).ToString();
+                Calculations.BaseTaxPercentage = int.Parse(_total);
                 OnPropertyChanged();
             }
         }

@@ -16,21 +16,10 @@ using System.Windows.Shapes;
 namespace SocialTool.Components
 {
     /// <summary>
-    /// Interaktionslogik für FormCheck.xaml
+    /// Interaktionslogik für FormInfo.xaml
     /// </summary>
-    public partial class FormCheck : UserControl
+    public partial class FormInfo : UserControl
     {
-
-        public bool IsChecked
-        {
-            get { return (bool)GetValue(IsCheckedProperty); }
-            set { SetValue(IsCheckedProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for IsChecked.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty IsCheckedProperty =
-            DependencyProperty.Register("IsChecked", typeof(bool), typeof(FormCheck), new PropertyMetadata(false));
-
         public string Label
         {
             get { return (string)GetValue(LabelProperty); }
@@ -39,9 +28,20 @@ namespace SocialTool.Components
 
         // Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LabelProperty =
-            DependencyProperty.Register("Label", typeof(string), typeof(FormCheck), new PropertyMetadata(string.Empty));
+            DependencyProperty.Register("Label", typeof(string), typeof(FormInfo), new PropertyMetadata(string.Empty));
 
-        public FormCheck()
+
+        public string Text
+        {
+            get { return (string)GetValue(TextProperty); }
+            set { SetValue(TextProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TextProperty =
+            DependencyProperty.Register("Text", typeof(string), typeof(FormInfo), new PropertyMetadata(string.Empty));
+
+        public FormInfo()
         {
             InitializeComponent();
         }

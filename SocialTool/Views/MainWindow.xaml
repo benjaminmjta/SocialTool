@@ -5,17 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SocialTool.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" MinHeight="400" MinWidth="650">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
             <ColumnDefinition Width="4*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="9*" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
-        <ContentControl Content="{Binding ControlViewModel}" Grid.RowSpan="2" />
+        <ContentControl Content="{Binding ControlViewModel}" />
+        <ContentControl Content="{Binding PersonalViewModel}" Grid.Column="1" />
+        <Border Padding="15 5 15 15" Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="0 1 0 0" BorderBrush="Gray">
+            <TextBlock TextWrapping="Wrap" Text="Diese Anwendung berechnet ganz grob das Nettoeinkommen, wenn man ein gleichmäßiges Umverteilungsmodell benutzt. Jeder Person wird ein fester Prozentsatz des Einkommens abgezogen und dieser Pool wird dann gleichmäßig an alle verteilt. Das ganze wird an 1000 Einkommen berechnet, die die Einkommensverteilung Deutschlands wiederspiegeln. Alle Angaben sind Jährlich." />
+        </Border>
     </Grid>
 </Window>

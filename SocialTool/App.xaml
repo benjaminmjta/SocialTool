@@ -7,7 +7,7 @@
              xmlns:controlviews="clr-namespace:SocialTool.Views.Control"
              xmlns:controlviewmodels="clr-namespace:SocialTool.ViewModels.Control"
              StartupUri="Views/MainWindow.xaml"
-             ThemeMode="System">
+             ThemeMode="Dark">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -16,6 +16,10 @@
             
             <DataTemplate DataType="{x:Type viewmodels:ControlViewModel}">
                 <views:ControlView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:PersonalViewModel}">
+                <views:PersonalView />
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type controlviewmodels:BaseTaxViewModel}">

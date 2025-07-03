@@ -15,6 +15,5 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <ContentControl Grid.Row="0" Content="{Binding BaseTaxViewModel}" />
-        <TextBlock Grid.Row="1" Text="{Binding BaseTaxViewModel.Limit}"/>
     </Grid>
 </UserControl>
